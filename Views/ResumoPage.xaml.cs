@@ -2,8 +2,12 @@ using BragaEventos.Models; using BragaEventos.Services; namespace BragaEventos.V
  if(BindingContext is not Evento evento)return;
  try{
   EventoStore.Salvar(evento);
+  LembreteAndroid.Agendar(evento);
   await DisplayAlert("Evento salvo","O evento foi salvo. A agenda será aberta agora.","OK");
   await Navigation.PushAsync(new AgendaPage());
  }catch(Exception ex){await DisplayAlert("Erro ao salvar","Não foi possível salvar o evento: "+ex.Message,"OK");}
  }
+async void Compartilhar(object sender,EventArgs e){if(BindingContext is Evento ev)try{await EventoExtras.Compartilhar(ev);}catch(Exception ex){await DisplayAlert("Compartilhar",ex.Message,"OK");}}
+async void AbrirMapa(object sender,EventArgs e){if(BindingContext is Evento ev)try{await EventoExtras.AbrirMapa(ev);}catch(Exception ex){await DisplayAlert("Mapa",ex.Message,"OK");}}
+async void ExportarPdf(object sender,EventArgs e){if(BindingContext is Evento ev)try{await RelatorioPdf.Exportar(ev);}catch(Exception ex){await DisplayAlert("PDF",ex.Message,"OK");}}
 void AlternarTema(object sender,EventArgs e)=>TemaService.Alternar(); async void Voltar(object sender,EventArgs e)=>await Navigation.PopAsync();}
