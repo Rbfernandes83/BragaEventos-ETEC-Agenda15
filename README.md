@@ -27,3 +27,14 @@ Anexar link do repositório e PDF com capturas do cadastro e resumo após testar
 - Preferência de lembrete no cadastro: **não** agenda notificações Android nesta versão.
 - Custo geral estimado: evento + hospedagem.
 - O aplicativo é um protótipo acadêmico; não realiza reservas reais de hotéis, inscrições online ou notificações automáticas.
+
+
+## Versão 1.2 — melhorias de usabilidade
+- Alternância de tema claro/escuro pelo botão ☀ / ☾ na barra superior; escolha mantida no dispositivo.
+- Melhor contraste de textos e campos conforme o tema.
+- Persistência da agenda em arquivo JSON local com gravação temporária e migração dos dados anteriores.
+- Após salvar, o aplicativo abre a agenda; erros de leitura e escrita são informados ao usuário.
+- Identificador único por evento, atualização sem duplicação, botão Editar e exclusão.
+- Resumo de hospedagem e lembrete com termos em português, ocultando noites quando hospedagem está desligada.
+- Notificações Android, pesquisa/filtros, hotéis reais e sincronização online ainda não implementados.
+- É necessário compilar e testar no aparelho antes de considerar esta versão validada.
