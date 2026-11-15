@@ -17,3 +17,13 @@ Aplicativo de cadastro de eventos em **C# / .NET MAUI**. Projeto separado da Age
 
 ## Entrega
 Anexar link do repositório e PDF com capturas do cadastro e resumo após testar no aparelho.
+
+
+## Versão 1.1 — ampliação da Agenda 15
+- Cadastro com BindingContext, DateTime, TimeSpan e StringFormat em datas e moeda.
+- Atalhos AddDays(+7), AddMonths(+1), AddYears(+1).
+- Agenda local com salvar, listar, consultar e excluir eventos (Preferences/JSON).
+- Hospedagem opcional: hóspedes, entrada/saída, diária, noites e custo estimado.
+- Preferência de lembrete no cadastro: **não** agenda notificações Android nesta versão.
+- Custo geral estimado: evento + hospedagem.
+- O aplicativo é um protótipo acadêmico; não realiza reservas reais de hotéis, inscrições online ou notificações automáticas.
