@@ -38,3 +38,17 @@ Anexar link do repositório e PDF com capturas do cadastro e resumo após testar
 - Resumo de hospedagem e lembrete com termos em português, ocultando noites quando hospedagem está desligada.
 - Notificações Android, pesquisa/filtros, hotéis reais e sincronização online ainda não implementados.
 - É necessário compilar e testar no aparelho antes de considerar esta versão validada.
+
+
+## Versão 1.3 — recursos adicionados ao código (ainda sem validação do APK)
+- Calendário mensal navegável com indicadores de eventos e consulta por dia.
+- Notificações locais Android: lembrete para 9h do dia anterior ao evento, quando habilitado e permitido pelo sistema; não há sincronização na nuvem.
+- Filtros por eventos futuros/realizados e busca por nome/local/categoria.
+- Compartilhamento do resumo pelo menu nativo (WhatsApp, e-mail etc., se instalados).
+- Abertura do local no aplicativo de mapas via link de pesquisa.
+- Geração e compartilhamento de PDF simples do resumo usando Android PdfDocument.
+- Painel financeiro de estimativas de custo e participantes.
+- Seleção de imagem da galeria, com cópia para o armazenamento privado do aplicativo.
+- Efeito cascata na tela de cadastro e temas claro/escuro.
+
+**Pendente:** compilar no GitHub Actions, instalar e validar no Android. O lembrete depende da permissão de notificações e pode sofrer atrasos conforme o sistema Android. O PDF é um resumo simples, não um comprovante fiscal. A foto é armazenada localmente e não é incluída no PDF.
