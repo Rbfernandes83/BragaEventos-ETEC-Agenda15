@@ -1,0 +1,1 @@
+using BragaEventos.Views; namespace BragaEventos; public partial class App : Application { public App(){InitializeComponent();} protected override Window CreateWindow(IActivationState? activationState)=>new(new NavigationPage(new CadastroPage()){BarBackgroundColor=Color.FromArgb("#101629"),BarTextColor=Colors.White}); }
