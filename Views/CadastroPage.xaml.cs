@@ -11,6 +11,7 @@ public partial class CadastroPage : ContentPage {
   await Task.WhenAll(card.FadeTo(1,190),card.TranslateTo(0,0,240,Easing.CubicOut),card.ScaleTo(1,240,Easing.CubicOut));
  }
 }
+ async void EscolherImagem(object sender,EventArgs e){try{await EventoExtras.EscolherImagem(evento);}catch(Exception ex){await DisplayAlert("Imagem","Não foi possível escolher a foto: "+ex.Message,"OK");}}
  void AlternarTema(object sender,EventArgs e)=>TemaService.Alternar();
  void MaisSeteDias(object sender,EventArgs e){evento.Inicio=evento.Inicio.AddDays(7);evento.Termino=evento.Termino.AddDays(7);}
  void MaisUmMes(object sender,EventArgs e){evento.Inicio=evento.Inicio.AddMonths(1);evento.Termino=evento.Termino.AddMonths(1);}
