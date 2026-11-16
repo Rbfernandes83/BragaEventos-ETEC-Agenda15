@@ -5,12 +5,12 @@ using Microsoft.Maui.ApplicationModel.DataTransfer;
 namespace BragaEventos.Services;
 public static class RelatorioPdf {
  public static async Task Exportar(Evento e){
-  var path=Path.Combine(FileSystem.CacheDirectory,"BragaEventos-"+e.Id+".pdf");
+  var path=System.IO.Path.Combine(FileSystem.CacheDirectory,"BragaEventos-"+e.Id+".pdf");
   using(var doc=new PdfDocument()){
    var info=new PdfDocument.PageInfo.Builder(595,842,1).Create();
    var page=doc.StartPage(info);
-   var canvas=page.Canvas;
-   using var paint=new Paint{AntiAlias=true,Color=Android.Graphics.Color.Rgb(20,42,64),TextSize=16};
+   var canvas=page.Canvas ?? throw new InvalidOperationException("Não foi possível criar a página PDF.");
+   using var paint=new Android.Graphics.Paint{AntiAlias=true,Color=Android.Graphics.Color.Rgb(20,42,64),TextSize=16};
    int y=70;
    foreach(var line in EventoExtras.Texto(e).Split('\n')){
     if(y>780)break;
